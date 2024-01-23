@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: url(background.jpg) no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+header {
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+.logo {
+  color: #fff;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0;
+  position: relative;
+  margin-right: 25px;
+}
+
+.nav-bar .btn-login {
+  margin-left: 20px;
+  padding: 7px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+}
+
+.nav-bar .btn-login:hover {
+  background: #fff;
+  transition: 0.5s;
+  color: #020725;
+  cursor: pointer;
+}
+
+.nav-bar a::after {
+  content: "";
+  width: 100%;
+  background: #fff;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  transform: scale(0);
+  transform-origin: right;
+  transition: 0.5s;
+}
+
+.nav-bar a:hover::after {
+  transform: scale(1);
+}
+
+.wrapper {
+  background: rgba(234, 234, 236, 0.2);
+  width: 380px;
+  height: 380px;
+  position: relative;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .formbox-login {
+  width: 100%;
+  padding: 10%;
+}
+
+.formbox-login h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #121247;
+  font-size: 30px;
+}
+
+.formbox-login .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px rgb(31, 31, 82) solid;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input-box input {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  position: absolute;
+  transform: translateY(25%);
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  transform: translateY(10%);
+  color: rgb(31, 31, 82);
+}
+
+.input-box .icon {
+  position: absolute;
+  left: 95%;
+  top: 50%;
+  color: rgb(27, 27, 77);
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  transition: .7s;
+}
+
+.formbox-login .remember-forgot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.remember-forgot label input {
+  margin-right: 5px;
+  accent-color: #e2e6e9;
+  transform: translateY(3px);
+}
+
+.formbox-login .remember-forgot a {
+  text-decoration: none;
+  color: #020725;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background: #071d30;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: rgba(34, 106, 134, 0.8);
+  cursor: pointer;
+}
+
+.formbox-login .login-register {
+  text-align: center;
+  font-size: 14px;
+}
+
+.formbox-login .login-register .register-link {
+  text-decoration: none;
+  color: #010d16;
+  font-weight: 600;
+}
